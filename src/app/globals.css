@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Primary Backgrounds */
+    --bg-deep: #0b1120;
+    --bg-surface: #111827;
+    --bg-card: #151f30;
+    --bg-elevated: #1c293b;
+
+    /* Accents */
+    --accent-primary: #ff8a3d;
+    --accent-hover: #ff9b57;
+    --accent-muted: rgba(255, 138, 61, 0.12);
+
+    /* Text */
+    --text-primary: #f8fafc;
+    --text-secondary: #a6b2c3;
+    --text-muted: #718096;
+
+    /* Borders */
+    --border-subtle: #1e293b;
+    --border-card: #243447;
+    --border-hover: #334155;
+
+    /* Statuses */
+    --status-success: #22c55e;
+    --status-warning: #f59e0b;
+    --status-error: #ef4444;
+    --status-info: #3b82f6;
+  }
+
+  /* Base Body Defaults */
+  body {
+    background-color: #0b1120;
+    color: #f8fafc;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Subtle Custom Scrollbars */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0b1120;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+  }
+
+  /* Direct Hex Replacement Classes for Enterprise Dark Theme */
+  .bg-\[\#0c1424\],
+  .bg-\[\#0c1322\],
+  .bg-\[\#0d1627\],
+  .bg-slate-900 {
+    background-color: #151F30 !important;
+  }
+
+  .bg-\[\#070b14\],
+  .bg-\[\#090f1d\],
+  .bg-\[\#070c17\],
+  .bg-slate-950 {
+    background-color: #0B1120 !important;
+  }
+
+  .bg-\[\#111a2e\],
+  .bg-\[\#111b2f\],
+  .bg-\[\#10192e\],
+  .bg-\[\#152033\],
+  .bg-\[\#162238\],
+  .bg-slate-800 {
+    background-color: #1C293B !important;
+  }
+
+  .border-\[\#17253e\],
+  .border-\[\#1b263b\],
+  .border-\[\#1b2944\],
+  .border-\[\#16233b\],
+  .border-\[\#1f2e4b\],
+  .border-\[\#1a2740\],
+  .border-\[\#243554\],
+  .border-slate-800 {
+    border-color: #243447 !important;
+  }
+
+  .border-\[\#1c2c47\],
+  .border-\[\#1e2d48\],
+  .border-\[\#1b2b48\],
+  .border-slate-700 {
+    border-color: #1E293B !important;
+  }
+
+  .text-orange-400,
+  .text-orange-500 {
+    color: #FF8A3D !important;
+  }
+
+  .bg-orange-600 {
+    background-color: #FF8A3D !important;
+  }
+
+  .hover\:bg-orange-500:hover {
+    background-color: #FF9B57 !important;
+  }
+
+  .border-orange-500\/20,
+  .border-orange-500\/30,
+  .border-orange-500\/50 {
+    border-color: rgba(255, 138, 61, 0.3) !important;
+  }
+
+  .bg-orange-950\/40,
+  .bg-orange-600\/10 {
+    background-color: rgba(255, 138, 61, 0.1) !important;
+  }
+
+  .text-slate-400 {
+    color: #A6B2C3 !important;
+  }
+
+  .text-slate-500 {
+    color: #718096 !important;
+  }
+
+  .text-slate-100,
+  .text-slate-200 {
+    color: #F8FAFC !important;
+  }
+
+  /* Input fields across application */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="search"],
+  select,
+  textarea {
+    background-color: #111827;
+    border-color: #1e293b;
+    color: #f8fafc;
+    outline: none;
+    transition: all 0.15s ease-in-out;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border-color: #ff8a3d !important;
+    box-shadow: 0 0 0 1px rgba(255, 138, 61, 0.3) !important;
+  }
+}
